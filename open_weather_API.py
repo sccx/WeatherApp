@@ -3,7 +3,7 @@
 import requests
 import pandas as pd
 from datetime import datetime, timedelta
-from credentials import app_id
+from credentials import ow_app_id
 
 # OpenWeather API call
 def api_call(endpoint):
@@ -15,7 +15,7 @@ def api_call(endpoint):
 lat = 38.824706
 lon = -85.749063
 
-forecast_endpoint = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely&appid=".format(lat=lat, lon=lon) + app_id
+forecast_endpoint = "https://api.openweathermap.org/data/2.5/onecall?lat={lat}&lon={lon}&exclude=minutely&appid=".format(lat=lat, lon=lon) + ow_app_id
 inbound_message = api_call(forecast_endpoint)
 
 # Save inbound data to S3 with timestamped_standard_name.json (?)
