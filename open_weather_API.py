@@ -32,5 +32,5 @@ filename = file_date + '_' + 'owdata.txt'
 s3 = boto3.resource('s3')
 BUCKET = 'wpf-weather-data'
 
-s3.Bucket(BUCKET).upload_file('owdata.txt', "openweather_data/" + filename)
+s3.Bucket(BUCKET).upload_file('owdata.txt', "weather-data/" + filename)
 
