@@ -1,5 +1,6 @@
 # Byte-compiled / optimized / DLL files
 config.py
+phone_numbers.txt
 __pycache__/
 *.py[cod]
 *$py.class
